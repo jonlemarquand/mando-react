@@ -1,0 +1,63 @@
+@import 'shared/_styles.scss';
+
+body {
+  background: $mandoBlack;
+  font-family: $primaryFont;
+  color: $mandoWhite;
+}
+
+header, footer {
+  margin: 20px 0;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+footer {
+  color: $mandoGreen;
+}
+
+h2 {
+  font-family: $primaryFont;
+  color: $mandoWhite;
+  font-size: 24px;
+  padding-right: 20px;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.overall-sort {
+  display: flex;
+  justify-content: space-evenly;
+
+  .display-sort, .mode-sort {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.root-choices, .variation-choices {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 150px;
+  width: 400px;
+  margin-left: 5px;
+}
