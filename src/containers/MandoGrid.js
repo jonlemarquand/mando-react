@@ -1,6 +1,44 @@
 import React from 'react';
 
-const MandoGrid = () => {
+import NoteCircle from '../components/NoteCircle';
+
+import AllStrings from '../data/AllStrings';
+import ScalesData from '../data/scales.json';
+
+const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) => {
+
+    // 1. Select Options
+    // 2. Filter Data Based on Options
+    // 3. Render Grid
+    // 4. Render NoteCircles
+
+    let Strings = [];
+
+    const currentSelection = ScalesData.c.root;
+    const getMandoInfo = () => {
+        if (mode === 'chords') {
+
+        } else if (mode === 'scales') {
+            console.log('scales selected');
+        } else if (mode ==='arpeggios') {
+
+        } else {
+            Strings = AllStrings;
+        }
+    }
+    getMandoInfo();
+    console.log(AllStrings);
+    const StringsView = Strings.map((string) => {
+        if (string.tab === "0") {
+        return (<div className={`tab tab${string.tab} string${string.string} no-border`}>
+            <NoteCircle noteName={string.noteName}/>
+        </div>)
+        } else {
+        return (<div className={`tab tab${string.tab} string${string.string}`}>
+            <NoteCircle noteName={string.noteName}/>
+        </div>)   
+        }
+    })
 
     const gridStrings = []
     // [ {1,1}, {1,2}
@@ -9,7 +47,6 @@ const MandoGrid = () => {
       for (let j = 1; j < 25; j++) {
         gridStrings.push(
           <div className={`tab tab${j} string${i}`}>
-            <div className="note-circle">Bb</div>
           </div>
         )
       }
@@ -22,6 +59,7 @@ const MandoGrid = () => {
       <div className="mando-tabs">
         { gridMarkers }
         { gridStrings }
+        { StringsView }
       </div>
     )
 }

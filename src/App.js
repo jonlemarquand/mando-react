@@ -9,7 +9,7 @@ import './App.scss';
 
 function App() {
 
-  const [mode, setMode] = useState("scales");
+  const [mode, setMode] = useState("");
   const [rootNote, setRootNote] = useState("");
   const [chordVariation, setChordVariation] = useState("");
   const [scaleVariation, setScaleVariation] = useState("");
@@ -51,7 +51,13 @@ function App() {
         handleDisplayChange={handleDisplayChange} 
         handleModeChange={handleModeChange}
       />
-      <MandoGrid />
+      <MandoGrid 
+        rootNote={rootNote} 
+        chordVariation={chordVariation} 
+        scaleVariation={scaleVariation}
+        mode={mode}
+        display={display}
+      />
       <Choices 
         rootNote={rootNote} 
         chordVariation={chordVariation} 

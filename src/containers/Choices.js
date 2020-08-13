@@ -153,6 +153,12 @@ const Choices = ({ rootNote, chordVariation, scaleVariation, handleRootNoteChang
             { ScaleVariationChoices }
           </div>
         )
+      } else {
+          return (
+        <div className="variation-choices" onChange={handleScaleVariationChange}>
+            { ScaleVariationChoices }
+         </div>
+          )
       }
     }
 
