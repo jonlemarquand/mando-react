@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FilterData = {
     c: {
         "root": "c",
@@ -16,7 +14,13 @@ const FilterData = {
             "major": ["c", "e", "g"],
             "minor": ["c", "eb", "g"],
             "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"]
+            "dim": ["c", "eb", "gb"],
+            "sixth": ["c", "e", "g", "a"],
+            "seventh": ["c", "e", "g", "bb"],
+            "majseven": ["c", "e", "g", "b"],
+            "minseven": ["c", "eb", "g", "bb"],
+            "sustwo": ["c", "d", "g"],
+            "susfour": ["c", "f", "g"]
         }
     },
     db: {

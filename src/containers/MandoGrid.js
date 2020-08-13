@@ -16,10 +16,6 @@ const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) =
     let FilteredStrings = [];
     const getMandoInfo = () => {
 
-        const addStringtoFilter = () => {
-            return 
-        }
-
         if (mode === 'chords') {
 
         } else if (mode === 'scales') {
