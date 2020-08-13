@@ -10,9 +10,9 @@ import './App.scss';
 function App() {
 
   const [mode, setMode] = useState("");
-  const [rootNote, setRootNote] = useState("");
-  const [chordVariation, setChordVariation] = useState("");
-  const [scaleVariation, setScaleVariation] = useState("");
+  const [rootNote, setRootNote] = useState("c");
+  const [chordVariation, setChordVariation] = useState("major");
+  const [scaleVariation, setScaleVariation] = useState("major");
   const [display, setDisplay] = useState("tab");
 
   const handleDisplayChange = (e) => {

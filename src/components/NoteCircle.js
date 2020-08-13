@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NoteCircle = ({ noteName }) => {
+const NoteCircle = ({ noteName, extraClass }) => {
     return (
-        <div className="note-circle">
+        <div className={`note-circle ${extraClass}`}>
             {noteName}
         </div>
     )

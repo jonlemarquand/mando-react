@@ -3,7 +3,7 @@ import React from 'react';
 import NoteCircle from '../components/NoteCircle';
 
 import AllStrings from '../data/AllStrings';
-import ScalesData from '../data/scales.json';
+import FilterData from '../data/FilterData';
 
 const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) => {
 
@@ -13,25 +13,49 @@ const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) =
     // 4. Render NoteCircles
 
     let Strings = [];
-
-    const currentSelection = ScalesData.c.root;
+    let FilteredStrings = [];
     const getMandoInfo = () => {
+
+        const addStringtoFilter = () => {
+            return 
+        }
+
         if (mode === 'chords') {
 
         } else if (mode === 'scales') {
-            console.log('scales selected');
+            AllStrings.forEach(string => {
+                if (FilterData[rootNote]["scales"][scaleVariation].some(i => i === string.noteName.toLowerCase())) {
+                    FilteredStrings.push(string);
+                }
+            })
+            Strings = FilteredStrings;
         } else if (mode ==='arpeggios') {
-
+            AllStrings.forEach(string => {
+                if (FilterData[rootNote]["chords"][chordVariation].some(i => i === string.noteName.toLowerCase())) {
+                    FilteredStrings.push(string);
+                }
+            });
+            console.log(FilteredStrings);
+            Strings = FilteredStrings;
         } else {
             Strings = AllStrings;
         }
     }
     getMandoInfo();
-    console.log(AllStrings);
+    //console.log(FilterData);
+
     const StringsView = Strings.map((string) => {
-        if (string.tab === "0") {
+        if (string.tab === "0" && string.noteName.toLowerCase() === rootNote && (mode === 'scales' || mode === 'arpeggios')) {
+            return (<div className={`tab tab${string.tab} string${string.string} no-border`}>
+            <NoteCircle noteName={string.noteName} extraClass="root-circle"/>
+        </div>) 
+        } else if (string.tab === "0") {
         return (<div className={`tab tab${string.tab} string${string.string} no-border`}>
             <NoteCircle noteName={string.noteName}/>
+        </div>)
+        } else if (string.noteName.toLowerCase() === rootNote && (mode === 'scales' || mode === 'arpeggios')) {
+            return (<div className={`tab tab${string.tab} string${string.string}`}>
+            <NoteCircle noteName={string.noteName} extraClass="root-circle"/>
         </div>)
         } else {
         return (<div className={`tab tab${string.tab} string${string.string}`}>
