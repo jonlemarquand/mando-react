@@ -14,7 +14,8 @@ const OverallSort = ({ display, handleDisplayChange, mode, handleModeChange }) =
         <div className="mode-sort" onChange={handleModeChange}>
           <h2>Mode:</h2>
           <RadioButton name="Scales" slug="scales" group="mode-choice" isChecked={mode}/>
-          <RadioButton name="Chords" slug="chords" group="mode-choice" isChecked={mode}/>
+          { // <RadioButton name="Chords" slug="chords" group="mode-choice" isChecked={mode}/>
+          }
           <RadioButton name="Arpeggios" slug="arpeggios" group="mode-choice" isChecked={mode}/>
         </div>
       </div>

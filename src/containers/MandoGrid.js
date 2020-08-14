@@ -27,7 +27,7 @@ const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) =
             Strings = FilteredStrings;
         } else if (mode ==='arpeggios') {
             AllStrings.forEach(string => {
-                if (FilterData[rootNote]["chords"][chordVariation].some(i => i === string.noteName.toLowerCase())) {
+                if (FilterData[rootNote]["arpeggios"][chordVariation].some(i => i === string.noteName.toLowerCase())) {
                     FilteredStrings.push(string);
                 }
             });
