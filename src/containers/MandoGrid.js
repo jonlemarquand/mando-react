@@ -1,9 +1,12 @@
 import React from 'react';
+import { isBrowser, isMobile } from "react-device-detect";
 
 import NoteCircle from '../components/NoteCircle';
 
 import AllStrings from '../data/AllStrings';
 import FilterData from '../data/FilterData';
+
+
 
 const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) => {
 
@@ -41,7 +44,25 @@ const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) =
     //console.log(FilterData);
 
     const StringsView = Strings.map((string) => {
-        if (string.tab === "0" && string.noteName.toLowerCase() === rootNote && (mode === 'scales' || mode === 'arpeggios')) {
+        if (isMobile) {
+            if (string.tab === "0" && string.noteName.toLowerCase() === rootNote && (mode === 'scales' || mode === 'arpeggios')) {
+                return (<div className={`tab tab${string.tab} string${string.string} no-border`}>
+                <NoteCircle noteName={string.noteName} extraClass="root-circle"/>
+            </div>) 
+            } else if (string.tab === "0") {
+            return (<div className={`tab tab${string.tab} string${string.string} no-border`}>
+                <NoteCircle noteName={string.noteName}/>
+            </div>)
+            } else if (string.noteName.toLowerCase() === rootNote && (mode === 'scales' || mode === 'arpeggios')) {
+                return (<div className={`tab tab${string.tab} string${string.string}`}>
+                <NoteCircle noteName={string.noteName} extraClass="root-circle"/>
+            </div>)
+            } else if (string.tab < 13){
+            return (<div className={`tab tab${string.tab} string${string.string}`}>
+                <NoteCircle noteName={string.noteName}/>
+            </div>)   
+            }
+        } else if (string.tab === "0" && string.noteName.toLowerCase() === rootNote && (mode === 'scales' || mode === 'arpeggios')) {
             return (<div className={`tab tab${string.tab} string${string.string} no-border`}>
             <NoteCircle noteName={string.noteName} extraClass="root-circle"/>
         </div>) 
@@ -64,14 +85,27 @@ const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) =
     // [ {1,1}, {1,2}
 
     for (let i = 1; i < 5; i++) {
-      for (let j = 1; j < 25; j++) {
-        gridStrings.push(
-          <div className={`tab tab${j} string${i}`}>
-          </div>
-        )
-      }
+        if(isBrowser) {
+            for (let j = 1; j < 25; j++) {
+                gridStrings.push(
+                <div className={`tab tab${j} string${i}`}>
+                </div>
+                )
+            }
+        }
+        if (isMobile) {
+            for (let j = 1; j < 13; j++) {
+                gridStrings.push(
+                <div className={`tab tab${j} string${i}`}>
+                </div>
+                )
+            }
+        }
     }
-    const markers = ["0", 3, 5, 7, 10, 12, 15, 17, 20, 22, 24]
+    let markers = ["0", 3, 5, 7, 10, 12, 15, 17, 20, 22, 24]
+    if (isMobile) {
+        markers = ["0", 3, 5, 7, 10, 12]
+    }
     const gridMarkers = markers.map(marker =>
       <div className={`no-border tab tab${marker} marker`}>{marker}</div>
     )

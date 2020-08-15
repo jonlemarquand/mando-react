@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile
+} from "react-device-detect";
 
 import Choices from './containers/Choices';
 import MandoGrid from './containers/MandoGrid';
@@ -46,28 +52,54 @@ function App() {
         <img src={logo} className="logo" alt="logo" />
       </header>
       <div>
-      <OverallSort 
-        display={display} 
-        mode={mode} 
-        handleDisplayChange={handleDisplayChange} 
-        handleModeChange={handleModeChange}
-      />
-      <MandoGrid 
-        rootNote={rootNote} 
-        chordVariation={chordVariation} 
-        scaleVariation={scaleVariation}
-        mode={mode}
-        display={display}
-      />
-      <Choices 
-        rootNote={rootNote} 
-        chordVariation={chordVariation} 
-        scaleVariation={scaleVariation} 
-        handleRootNoteChange={handleRootNoteChange} 
-        handleChordVariationChange={handleChordVariationChange} 
-        handleScaleVariationChange={handleScaleVariationChange} 
-        mode={mode}
-      />
+      <BrowserView>
+        <OverallSort 
+          display={display} 
+          mode={mode} 
+          handleDisplayChange={handleDisplayChange} 
+          handleModeChange={handleModeChange}
+        />
+        <MandoGrid 
+          rootNote={rootNote} 
+          chordVariation={chordVariation} 
+          scaleVariation={scaleVariation}
+          mode={mode}
+          display={display}
+        />
+        <Choices 
+          rootNote={rootNote} 
+          chordVariation={chordVariation} 
+          scaleVariation={scaleVariation} 
+          handleRootNoteChange={handleRootNoteChange} 
+          handleChordVariationChange={handleChordVariationChange} 
+          handleScaleVariationChange={handleScaleVariationChange} 
+          mode={mode}
+        />
+      </BrowserView>
+      <MobileView viewClassName="mobile-content">
+        <MandoGrid 
+          rootNote={rootNote} 
+          chordVariation={chordVariation} 
+          scaleVariation={scaleVariation}
+          mode={mode}
+          display={display}
+        />
+        <OverallSort 
+          display={display} 
+          mode={mode} 
+          handleDisplayChange={handleDisplayChange} 
+          handleModeChange={handleModeChange}
+        />
+        <Choices 
+          rootNote={rootNote} 
+          chordVariation={chordVariation} 
+          scaleVariation={scaleVariation} 
+          handleRootNoteChange={handleRootNoteChange} 
+          handleChordVariationChange={handleChordVariationChange} 
+          handleScaleVariationChange={handleScaleVariationChange} 
+          mode={mode}
+        />
+      </MobileView>
       </div>
       <footer>
         A Jon Le Marquand website.

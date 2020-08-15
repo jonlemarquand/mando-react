@@ -35,6 +35,10 @@ h2 {
 
 .logo {
   height: 150px;
+  @media screen and (max-width: $mobileBreakpoint) {
+    height: 100px;
+    width: 225px;
+  }
 }
 
 .overall-sort {
@@ -44,6 +48,12 @@ h2 {
   .display-sort, .mode-sort {
     display: flex;
     align-items: center;
+  
+    @media screen and (max-width: $mobileBreakpoint) {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
 }
@@ -52,6 +62,10 @@ h2 {
   margin: 20px 0;
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: $mobileBreakpoint) {
+    flex-direction: column;
+  }
 }
 
 .root-choices, .variation-choices {
@@ -61,11 +75,15 @@ h2 {
   height: 150px;
   width: 400px;
   margin-left: 5px;
+
+  @media screen and (max-width: $mobileBreakpoint) {
+    height: 270px;
+    width: 360px;
+  }
 }
 
 .mando-tabs {
   display: grid;
-  width: 90%;
   max-width: 1200px;
   position: relative;
   margin: auto;
@@ -74,12 +92,21 @@ h2 {
   font-weight: 500;
   font-size: 18px;
 
+  @media screen and (max-width: $mobileBreakpoint) {
+    width: auto;
+    padding-right: 40px;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(13, 1fr);
+  }
+
   .tab {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid $mandoGrey;
     background: $mandoWhite;
+
+    
 
     &.no-border {
       border: 0;
@@ -89,130 +116,306 @@ h2 {
     &.marker {
       grid-row-start: 1;
       grid-row-end: 1;
+      
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-column-start: 1;
+        grid-column-end: 1;
+      }
     }
 
     &.string1 {
       grid-row-start: 2;
       grid-row-end: 2;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-column-start: 2;
+        grid-column-end: 2;
+      }
     }
 
     &.string2 {
       grid-row-start: 3;
       grid-row-end: 3;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-column-start: 3;
+        grid-column-end: 3;
+      }
     }
 
     &.string3 {
       grid-row-start: 4;
       grid-row-end: 4;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-column-start: 4;
+        grid-column-end: 4;
+      }
     }
 
     &.string4 {
       grid-row-start: 5;
       grid-row-end: 5;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-column-start: 5;
+        grid-column-end: 5;
+      }
     }
 
     &.tab0 {
       grid-column-start: 1;
       grid-column-end: 1;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 1;
+        grid-row-end: 1;
+      }
     }
     &.tab1 {
       grid-column-start: 2;
       grid-column-end: 2;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        grid-row-start: 2;
+        grid-row-end: 2;
+      }
     }
     &.tab2 {
       grid-column-start: 3;
       grid-column-end: 3;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 3;
+        grid-row-end: 3;
+      }
     }
     &.tab3 {
       grid-column-start: 4;
       grid-column-end: 4;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 4;
+        grid-row-end: 4;
+      }
     }
     &.tab4 {
       grid-column-start: 5;
       grid-column-end: 5;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 5;
+        grid-row-end: 5;
+      }
     }
     &.tab5 {
       grid-column-start: 6;
       grid-column-end: 6;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 6;
+        grid-row-end: 6;
+      }
     }
     &.tab6 {
       grid-column-start: 7;
       grid-column-end: 7;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 7;
+        grid-row-end: 7;
+      }
     }
     &.tab7 {
       grid-column-start: 8;
       grid-column-end: 8;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 8;
+        grid-row-end: 8;
+      }
     }
     &.tab8 {
       grid-column-start: 9;
       grid-column-end: 9;
+    
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 9;
+        grid-row-end: 9;
+      }
     }
     &.tab9 {
       grid-column-start: 10;
       grid-column-end: 10;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 10;
+        grid-row-end: 10;
+      }
     }
     &.tab10 {
       grid-column-start: 11;
       grid-column-end: 11;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 11;
+        grid-row-end: 11;
+      }
     }
     &.tab11 {
       grid-column-start: 12;
       grid-column-end: 12;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 12;
+        grid-row-end: 12;
+      }
     }
     &.tab12 {
       grid-column-start: 13;
       grid-column-end: 13;
+      @media screen and (max-width: $mobileBreakpoint) {
+        
+        grid-row-start: 13;
+        grid-row-end: 13;
+      }
     }
     &.tab13 {
       grid-column-start: 14;
       grid-column-end: 14;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab14 {
       grid-column-start: 15;
       grid-column-end: 15;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab15 {
       grid-column-start: 16;
       grid-column-end: 16;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab16 {
       grid-column-start: 17;
       grid-column-end: 17;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab17 {
       grid-column-start: 18;
       grid-column-end: 18;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab18 {
       grid-column-start: 19;
       grid-column-end: 19;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab19 {
       grid-column-start: 20;
       grid-column-end: 20;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab20 {
       grid-column-start: 21;
       grid-column-end: 21;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab21 {
       grid-column-start: 22;
       grid-column-end: 22;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab22 {
       grid-column-start: 23;
       grid-column-end: 23;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab23 {
       grid-column-start: 24;
       grid-column-end: 24;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
     &.tab24 {
       grid-column-start: 25;
       grid-column-end: 25;
+      @media screen and (max-width: $mobileBreakpoint) {
+        display: none;
+      }
     }
   }
 }
+
+.marker {
+  @media screen and (max-width: $mobileBreakpoint) {
+    
+    grid-column-start: 1 !important;
+    grid-column-end: 1 !important;
+  }
+}
+
+.string1 {
+  @media screen and (max-width: $mobileBreakpoint) {
+    
+    grid-column-start: 5 !important;
+    grid-column-end: 5 !important;
+  }
+}
+
+.string2 {
+  @media screen and (max-width: $mobileBreakpoint) {
+    
+    grid-column-start: 4 !important;
+    grid-column-end: 4 !important;
+  }
+}
+
+.string3 {
+  @media screen and (max-width: $mobileBreakpoint) {
+    
+    grid-column-start: 3 !important;
+    grid-column-end: 3 !important;
+  }
+}
+
+.string4 {
+  @media screen and (max-width: $mobileBreakpoint) {
+    
+    grid-column-start: 2 !important;
+    grid-column-end: 2 !important;
+  }
+}
+
 
 .note-circle {
   background: $mandoOrange;
@@ -229,4 +432,10 @@ h2 {
 &.root-circle {
     background: $mandoGreen;
   }
+}
+
+.mobile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
