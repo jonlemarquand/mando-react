@@ -22,6 +22,10 @@
     color: $mandoWhite;
     font-size: 18px;
     font-weight: 700;
+
+    @media screen and (max-width: $mobileBreakpoint) {
+        color: $mandoBlack;
+    }
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {

@@ -1,0 +1,14 @@
+@import '../shared/_styles.scss';
+
+.options-button {
+    width: 240px;
+    height: 40px;
+    background: $mandoGreen;
+    color: $mandoWhite;
+    font-family: $primaryFont;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}

@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import {
   BrowserView,
   MobileView,
-  isBrowser,
-  isMobile
 } from "react-device-detect";
 
 import Choices from './containers/Choices';
 import MandoGrid from './containers/MandoGrid';
+import MobileOverlay from './containers/mobileOverlay/MobileOverlay';
 import OverallSort from './containers/OverallSort';
 
 import logo from './logo150.webp';
@@ -51,7 +50,6 @@ function App() {
       <header>
         <img src={logo} className="logo" alt="logo" />
       </header>
-      <div>
       <BrowserView>
         <OverallSort 
           display={display} 
@@ -77,30 +75,19 @@ function App() {
         />
       </BrowserView>
       <MobileView viewClassName="mobile-content">
-        <MandoGrid 
+        <MobileOverlay 
           rootNote={rootNote} 
           chordVariation={chordVariation} 
           scaleVariation={scaleVariation}
           mode={mode}
           display={display}
-        />
-        <OverallSort 
-          display={display} 
-          mode={mode} 
-          handleDisplayChange={handleDisplayChange} 
-          handleModeChange={handleModeChange}
-        />
-        <Choices 
-          rootNote={rootNote} 
-          chordVariation={chordVariation} 
-          scaleVariation={scaleVariation} 
           handleRootNoteChange={handleRootNoteChange} 
           handleChordVariationChange={handleChordVariationChange} 
-          handleScaleVariationChange={handleScaleVariationChange} 
-          mode={mode}
+          handleScaleVariationChange={handleScaleVariationChange}
+          handleDisplayChange={handleDisplayChange} 
+          handleModeChange={handleModeChange} 
         />
       </MobileView>
-      </div>
       <footer>
         A Jon Le Marquand website.
       </footer>

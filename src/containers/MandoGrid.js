@@ -71,13 +71,17 @@ const MandoGrid = ({ rootNote, mode, display, chordVariation, scaleVariation}) =
             <NoteCircle noteName={string.noteName}/>
         </div>)
         } else if (string.noteName.toLowerCase() === rootNote && (mode === 'scales' || mode === 'arpeggios')) {
-            return (<div className={`tab tab${string.tab} string${string.string}`}>
-            <NoteCircle noteName={string.noteName} extraClass="root-circle"/>
-        </div>)
+            return (
+                <div className={`tab tab${string.tab} string${string.string}`}>
+                    <NoteCircle noteName={string.noteName} extraClass="root-circle"/>
+                </div>
+            )
         } else {
-        return (<div className={`tab tab${string.tab} string${string.string}`}>
-            <NoteCircle noteName={string.noteName}/>
-        </div>)   
+            return (
+                <div className={`tab tab${string.tab} string${string.string}`}>
+                    <NoteCircle noteName={string.noteName}/>
+                </div>
+            )   
         }
     })
 
