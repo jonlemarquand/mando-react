@@ -45,6 +45,7 @@ function App() {
       <header>
         <img src={logo} className="logo" alt="logo" />
       </header>
+      <div>
       <OverallSort 
         display={display} 
         mode={mode} 
@@ -67,6 +68,7 @@ function App() {
         handleScaleVariationChange={handleScaleVariationChange} 
         mode={mode}
       />
+      </div>
       <footer>
         A Jon Le Marquand website.
       </footer>
