@@ -9,7 +9,7 @@ import './App.scss';
 
 function App() {
 
-  const [mode, setMode] = useState("");
+  const [mode, setMode] = useState("fret");
   const [rootNote, setRootNote] = useState("c");
   const [chordVariation, setChordVariation] = useState("major");
   const [scaleVariation, setScaleVariation] = useState("major");
