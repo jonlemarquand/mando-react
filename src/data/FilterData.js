@@ -35,16 +35,16 @@ const FilterData = {
             "pminor": ["db", "e", "gb", "ab", "b"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["db", "f", "ab"],
+            "minor": ["db", "e", "ab"],
+            "aug": ["db", "f", "a"],
+            "dim": ["db", "e", "g"],
+            "sixth": ["db", "f", "ab", "bb"],
+            "seventh": ["db", "f", "ab", "b"],
+            "majseven": ["db", "f", "ab", "c"],
+            "minseven": ["db", "e", "ab", "b"],
+            "sustwo": ["db", "eb", "ab"],
+            "susfour": ["db", "gb", "ab"]
         }
     },
     d: {
@@ -59,16 +59,16 @@ const FilterData = {
             "pminor": ["d", "f", "g", "a", "c"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["d", "gb", "a"],
+            "minor": ["d", "f", "a"],
+            "aug": ["d", "gb", "bb"],
+            "dim": ["d", "f", "ab"],
+            "sixth": ["d", "gb", "a", "b"],
+            "seventh": ["d", "gb", "a", "c"],
+            "majseven": ["d", "gb", "a", "db"],
+            "minseven": ["d", "f", "a", "c"],
+            "sustwo": ["d", "e", "a"],
+            "susfour": ["d", "g", "a"]
         }
     },
     eb: {
@@ -83,16 +83,16 @@ const FilterData = {
             "pminor": ["eb", "gb", "ab", "bb", "db"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["eb", "g", "bb"],
+            "minor": ["eb", "gb", "bb"],
+            "aug": ["eb", "g", "b"],
+            "dim": ["eb", "gb", "a"],
+            "sixth": ["eb", "g", "bb", "c"],
+            "seventh": ["eb", "g", "bb", "db"],
+            "majseven": ["eb", "g", "bb", "d"],
+            "minseven": ["eb", "gb", "bb", "db"],
+            "sustwo": ["eb", "f", "bb"],
+            "susfour": ["eb", "ab", "bb"]
         }
     },
     e: {
@@ -107,16 +107,16 @@ const FilterData = {
             "pminor": ["e", "g", "a", "b", "d"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["e", "ab", "b"],
+            "minor": ["e", "g", "b"],
+            "aug": ["e", "ab", "c"],
+            "dim": ["e", "g", "bb"],
+            "sixth": ["e", "ab", "b", "db"],
+            "seventh": ["e", "ab", "b", "d"],
+            "majseven": ["e", "ab", "b", "eb"],
+            "minseven": ["e", "g", "b", "d"],
+            "sustwo": ["e", "gb", "b"],
+            "susfour": ["e", "a", "b"]
         }
     },
     f: {
@@ -131,16 +131,16 @@ const FilterData = {
             "pminor": ["f", "ab", "bb", "c", "eb"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["f", "a", "c"],
+            "minor": ["f", "ab", "c"],
+            "aug": ["f", "a", "db"],
+            "dim": ["f", "ab", "b"],
+            "sixth": ["f", "a", "c", "d"],
+            "seventh": ["f", "a", "c", "eb"],
+            "majseven": ["f", "a", "c", "e"],
+            "minseven": ["f", "ab", "c", "eb"],
+            "sustwo": ["f", "g", "c"],
+            "susfour": ["f", "bb", "c"]
         }
     },
     gb: {
@@ -155,16 +155,16 @@ const FilterData = {
             "pminor": ["gb", "a", "b", "db", "e"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["gb", "bb", "db"],
+            "minor": ["gb", "a", "db"],
+            "aug": ["gb", "bb", "d"],
+            "dim": ["gb", "a", "c"],
+            "sixth": ["gb", "bb", "db", "eb"],
+            "seventh": ["gb", "bb", "db", "e"],
+            "majseven": ["gb", "bb", "db", "f"],
+            "minseven": ["gb", "a", "db", "e"],
+            "sustwo": ["gb", "ab", "db"],
+            "susfour": ["gb", "b", "db"]
         }
     },
     g: {
@@ -179,16 +179,16 @@ const FilterData = {
             "pminor": ["g", "bb", "c", "d", "f"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["g", "b", "d"],
+            "minor": ["g", "bb", "d"],
+            "aug": ["g", "b", "eb"],
+            "dim": ["g", "bb", "db"],
+            "sixth": ["g", "b", "d", "e"],
+            "seventh": ["g", "b", "d", "f"],
+            "majseven": ["g", "b", "d", "gb"],
+            "minseven": ["g", "bb", "d", "f"],
+            "sustwo": ["g", "a", "d"],
+            "susfour": ["g", "c", "d"]
         }
     },
     ab: {
@@ -203,16 +203,16 @@ const FilterData = {
             "pminor": ["ab", "b", "db", "eb", "gb"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["ab", "c", "eb"],
+            "minor": ["ab", "b", "eb"],
+            "aug": ["ab", "c", "e"],
+            "dim": ["ab", "b", "d"],
+            "sixth": ["ab", "c", "eb", "f"],
+            "seventh": ["ab", "c", "eb", "gb"],
+            "majseven": ["ab", "c", "eb", "g"],
+            "minseven": ["ab", "b", "eb", "gb"],
+            "sustwo": ["ab", "bb", "eb"],
+            "susfour": ["ab", "db", "eb"]
         }
     },
     a: {
@@ -227,16 +227,16 @@ const FilterData = {
             "pminor": ["a", "c", "d", "e", "g"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["a", "db", "e"],
+            "minor": ["a", "c", "e"],
+            "aug": ["a", "db", "f"],
+            "dim": ["a", "c", "eb"],
+            "sixth": ["a", "db", "e", "gb"],
+            "seventh": ["a", "db", "e", "g"],
+            "majseven": ["a", "db", "e", "ab"],
+            "minseven": ["a", "c", "e", "g"],
+            "sustwo": ["a", "b", "e"],
+            "susfour": ["a", "d", "e"]
         }
     },
     bb: {
@@ -251,16 +251,16 @@ const FilterData = {
             "pminor": ["bb", "db", "eb", "f", "ab"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["bb", "d", "f"],
+            "minor": ["bb", "db", "f"],
+            "aug": ["bb", "d", "gb"],
+            "dim": ["bb", "db", "e"],
+            "sixth": ["bb", "d", "f", "g"],
+            "seventh": ["bb", "d", "f", "ab"],
+            "majseven": ["bb", "d", "f", "a"],
+            "minseven": ["bb", "db", "f", "ab"],
+            "sustwo": ["bb", "c", "f"],
+            "susfour": ["bb", "eb", "f"]
         }
     },
     b: {
@@ -275,16 +275,16 @@ const FilterData = {
             "pminor": ["b", "d", "e", "gb", "a"]
         },
         "arpeggios": {
-            "major": ["c", "e", "g"],
-            "minor": ["c", "eb", "g"],
-            "aug": ["c", "e", "ab"],
-            "dim": ["c", "eb", "gb"],
-            "sixth": ["c", "e", "g", "a"],
-            "seventh": ["c", "e", "g", "bb"],
-            "majseven": ["c", "e", "g", "b"],
-            "minseven": ["c", "eb", "g", "bb"],
-            "sustwo": ["c", "d", "g"],
-            "susfour": ["c", "f", "g"]
+            "major": ["b", "eb", "gb"],
+            "minor": ["b", "d", "gb"],
+            "aug": ["b", "eb", "g"],
+            "dim": ["b", "d", "f"],
+            "sixth": ["b", "eb", "gb", "ab"],
+            "seventh": ["b", "eb", "gb", "a"],
+            "majseven": ["b", "eb", "gb", "bb"],
+            "minseven": ["b", "d", "gb", "a"],
+            "sustwo": ["b", "db", "gb"],
+            "susfour": ["b", "e", "gb"]
         }
     },
 }
